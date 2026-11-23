@@ -2,7 +2,7 @@
 
 AWS Certified Generative AI Developer – Professional 中文练习，共 136 道题。
 
-**[打开互动题库](https://jiufu-question-practice.agileopal5.chatgpt.site)**
+**[打开互动题库](https://jiufuzh.github.io/AIP-C01/)**
 
 单选题点选后立即判分，多选题选齐后提交。答完可以查看参考答案和中文解析，使用答题卡跳题或重做错题。练习进度保存在当前浏览器。
 
