@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f4f6f3">
+  <title>AIP-C01 互动题库</title>
+  <meta name="description" content="AWS Certified Generative AI Developer – Professional 中文逐题练习。">
+  <link rel="stylesheet" href="./practice.css">
+  <script defer src="./questions.js"></script>
+  <script defer src="./practice.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap mast-inner">
+      <div class="brand">
+        <span class="book-symbol" aria-hidden="true"></span>
+        <div><div class="brand-title"><span lang="en">AIP-C01</span> 互动题库</div>
+        <p class="exam-name" lang="en">AWS Certified Generative AI Developer – Professional</p></div>
+      </div>
+      <div class="header-right">
+        <div class="progress-line"><span id="progress-text">练习进度</span><progress id="progress" value="0" max="136" aria-label="已答题目"></progress></div>
+        <button type="button" id="open-map" class="button small map-toggle" aria-haspopup="dialog">答题卡</button>
+      </div>
+    </div>
+  </header>
+  <main class="wrap workspace">
+    <article class="sheet" aria-labelledby="number">
+      <div class="sheet-head"><h1 id="number" tabindex="-1">第 1 题</h1><span class="type" id="type">单选题</span></div>
+      <div id="stem" class="stem"></div>
+      <fieldset class="answers">
+        <legend id="instructions">请选择一个选项</legend>
+        <div id="choices" class="choices"></div>
+      </fieldset>
+      <div class="multi-actions" id="multi-actions" hidden>
+        <span id="selection-count"></span><button type="button" class="button primary" id="submit-answer" disabled>提交答案</button>
+      </div>
+      <section id="feedback" class="feedback" aria-labelledby="verdict" hidden>
+        <div class="feedback-head"><h2 id="verdict" tabindex="-1"></h2><span id="source-label" class="source-label"></span></div>
+        <p id="grade" class="grade"></p>
+        <h3>答案解析</h3>
+        <div id="explanation" class="explanation"></div>
+        <details id="choice-details"><summary>逐项解析</summary><dl id="choice-notes" class="notes"></dl></details>
+        <details id="source-details"><summary>查看资料出处</summary>
+          <div class="source-body"><p id="source-pages"></p><p id="source-votes" hidden></p><div id="source-links"></div></div>
+        </details>
+      </section>
+      <nav class="question-nav" aria-label="逐题导航">
+        <button id="previous" class="button" type="button">上一题</button>
+        <button id="retry" class="text-button" type="button" hidden>重做本题</button>
+        <button id="next" class="button primary next" type="button">下一题</button>
+      </nav>
+    </article>
+    <div id="desktop-map" class="rail">
+      <aside id="question-map" class="question-map" aria-labelledby="map-title">
+        <div class="map-title-row"><h2 id="map-title">答题卡</h2><button type="button" class="text-button map-close" id="close-map">关闭</button></div>
+        <div class="map-stats" aria-label="当前作答记录">
+          <div><span class="stat-number" id="correct-count">0</span><span>答对</span></div>
+          <div><span class="stat-number" id="wrong-count">0</span><span>答错</span></div>
+          <div><span class="stat-number" id="unanswered-count">136</span><span>未答</span></div>
+        </div>
+        <div id="map-filters" class="filters" role="group" aria-label="筛选题号">
+          <button type="button" class="filter selected" data-filter="all" aria-pressed="true">全部</button>
+          <button type="button" class="filter" data-filter="unanswered" aria-pressed="false">未答</button>
+          <button type="button" class="filter" data-filter="wrong" aria-pressed="false">错题</button>
+        </div>
+        <div id="map-grid" class="map-grid" role="group" aria-label="跳到指定题号"></div>
+        <p id="map-empty" class="map-empty" hidden></p>
+        <div id="map-pagination" class="map-pagination"><button id="map-prev" class="text-button" type="button">上一组</button>
+          <span id="map-page"></span><button id="map-next" class="text-button" type="button">下一组</button></div>
+        <p id="storage-note" class="storage-note">进度保存在当前浏览器</p>
+      </aside>
+    </div>
+  </main>
+  <dialog id="map-dialog" aria-labelledby="map-title"><div id="mobile-map"></div></dialog>
+  <p id="live" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></p>
+  <noscript><p class="wrap">请在浏览器中开启 JavaScript 以作答和查看解析。</p></noscript>
+</body>
+</html>
